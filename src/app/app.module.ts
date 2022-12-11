@@ -8,9 +8,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserRegComponent } from './user-reg/user-reg.component';
-import { UserProfileComponent } from './user-profile/user-profile.component'
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NewnavbarComponent } from './newnavbar/newnavbar.component'
+import { FormsModule } from '@angular/forms';
 
-const myRoute:Routes=[]
+const myRoute:Routes=[
+  {
+    path:"",
+    component:AdminloginComponent
+  },
+  {
+    path:"userlogin",
+    component:UserLoginComponent
+  },
+  {
+    path:"userReg",
+    component:UserRegComponent
+  },
+  {
+    path:"userProfile",
+    component:UserProfileComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -18,12 +38,15 @@ const myRoute:Routes=[]
     AdminloginComponent,
     UserLoginComponent,
     UserRegComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    NavbarComponent,
+    NewnavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(myRoute),
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
