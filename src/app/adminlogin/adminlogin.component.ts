@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AdminloginComponent {
 
-  constructor(private route:Router){}
+  constructor(private route:Router){
+    localStorage.removeItem("userInfo");
+  }
   username = ""
   password = ""
   
@@ -20,5 +22,4 @@ export class AdminloginComponent {
     }
 
   }
-
 }
