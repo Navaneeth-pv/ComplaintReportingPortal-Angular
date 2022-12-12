@@ -12,6 +12,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NewnavbarComponent } from './newnavbar/newnavbar.component'
 import { FormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const myRoute:Routes=[
   {
@@ -29,6 +30,10 @@ const myRoute:Routes=[
   {
     path:"userProfile",
     component:UserProfileComponent
+  },
+  {
+    path:"dashboard",
+    component:DashboardComponent
   }
 ]
 
@@ -40,7 +45,8 @@ const myRoute:Routes=[
     UserRegComponent,
     UserProfileComponent,
     NavbarComponent,
-    NewnavbarComponent
+    NewnavbarComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
